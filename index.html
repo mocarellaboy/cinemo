@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEMO | Фильмы онлайн 2025</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-film"></i> CINEMO</h1>
+            <p class="subtitle">Платформа для просмотра фильмов</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="video-container">
+                <!-- Видеоплеер -->
+                <div id="playerContainer" class="video-player">
+                    <button class="close-player" id="closePlayer">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div id="player"></div>
+                    <div id="cinemoMessage" class="cinemo-message">
+                        CINEMO - смотрите сколько влезет :)
+                    </div>
+                </div>
+                
+                <!-- Поиск -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" 
+                               id="searchInput" 
+                               class="search-input" 
+                               placeholder="Поиск фильмов..."
+                               autocomplete="off">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                </div>
+                
+                <h2 class="section-title">
+                    <i class="fas fa-video"></i> Фильмы в коллекции
+                    <span class="movies-count" id="moviesCount">5</span>
+                </h2>
+                
+                <div class="video-list" id="videoList">
+                    <!-- Видео элементы будут добавлены через JS -->
+                </div>
+                
+                <div class="empty-state" id="emptyState">
+                    <i class="fas fa-video-slash"></i>
+                    <h3>Фильмы не найдены</h3>
+                    <p>Попробуйте изменить поисковый запрос</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 CINEMO</p>
+            <p class="footer-note">Почта для связи - maliyev602@gmail.com</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
