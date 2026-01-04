@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,17 @@
 <body>
     <div class="container">
         <header>
-            <h1><i class="fas fa-film"></i> CINEMO</h1>
+            <div class="header-top">
+                <h1><i class="fas fa-film"></i> CINEMO</h1>
+                <!-- РАБОЧИЙ ПЕРЕКЛЮЧАТЕЛЬ ТЕМ ИЗ СТАРОГО КОДА -->
+                <div class="theme-switcher" id="themeSwitcher" title="Сменить тему">
+                    <div class="theme-icon">
+                        <i class="fas fa-moon dark-icon"></i>
+                        <i class="fas fa-sun light-icon"></i>
+                    </div>
+                    <span class="theme-label" id="themeLabel">Темная</span>
+                </div>
+            </div>
             <p class="subtitle">Платформа для просмотра фильмов</p>
         </header>
         
@@ -39,9 +49,25 @@
                     </div>
                 </div>
                 
+                <!-- Пагинация -->
+                <div class="pagination-container">
+                    <div class="pagination-info" id="paginationInfo">
+                        <span id="currentCount">0</span> из <span id="totalCount">0</span> фильмов
+                    </div>
+                    <div class="pagination-controls" id="paginationControls">
+                        <button class="pagination-btn" id="prevBtn" disabled>
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="page-numbers" id="pageNumbers"></div>
+                        <button class="pagination-btn" id="nextBtn" disabled>
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
                 <h2 class="section-title">
                     <i class="fas fa-video"></i> Фильмы в коллекции
-                    <span class="movies-count" id="moviesCount">5</span>
+                    <span class="movies-count" id="moviesCount">0</span>
                 </h2>
                 
                 <div class="video-list" id="videoList">
